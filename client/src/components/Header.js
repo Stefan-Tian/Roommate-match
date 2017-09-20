@@ -10,7 +10,7 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <Link className="grey-text text-lighten-4" to="/login">
+            <Link className="blue-grey-text text-darken-3" to="/login">
               Login
             </Link>
           </li>
@@ -18,7 +18,9 @@ class Header extends Component {
       default:
         return (
           <li>
-            <a href="/api/logout">Logout</a>
+            <a className="blue-grey-text text-darken-3" href="/api/logout">
+              Logout
+            </a>
           </li>
         );
     }
@@ -26,12 +28,12 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper teal lighten-2 z-depth-4">
-          <Link to="/" className="brand-logo grey-text text-lighten-3">
+      <nav className="grey lighten-2 z-depth-2">
+        <div className="container nav-wrapper">
+          <Link to="/" className="brand-logo blue-grey-text text-darken-3">
             Roommate Match
           </Link>
-          <ul className="right grey-text text-lighten-4">
+          <ul className="right blue-grey-text text-darken-3">
             <li>Start looking</li>
             {this.renderContent()}
           </ul>
